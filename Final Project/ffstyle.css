@@ -1,0 +1,69 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+  main {
+    padding: 20px;
+  }
+
+  .map-container {
+    margin: 20px auto;
+    max-width: 800px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  body.home {
+    background-image: url('home-background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  body.food-trucks {
+    background-image: url('food-trucks-background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
