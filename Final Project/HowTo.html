@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Foodie Finder</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="ffstyle.css">
+</head>
+<body>
+<header><h1>Foodie Finder</h1></header>
+<nav>
+  <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Food Trucks.html">Find Food Trucks</a></li>
+    <li><a href="Walk-Up.html">Find Food Stands</a></li>
+    <li><a href="Sit-Down.html">Find Sit-down Restaurants</a></li>
+    <li><a href="Drive-Trough.html">Find Drive-Troughs</a></li>
+    <li><a href="Chains.html">Find Chain Restaurants</a></li>
+    <li><a href="Custom.html">Custom Finder Select</a></li>
+    <li><a href="How To.html">How To Use</a>  
+  </ul>
+</nav>
+
+<nav>
+  <ul>
+    <li><a href="Guide.html" onclick="openLink('https://www.youtube.com/watch?v=FgXYzF5-Yiw')">Website Guide</a></li>
+    <li><a href="FAQ.html" onclick="openLink('https://www.youtube.com/watch?v=55TD9gnMt3Y')">FAQ</a></li>
+    <li><a href="About.html" onclick="openLink('https://www.youtube.com/watch?v=Nf8FCLT8S6A')">About Us</a></li>
+  </ul>
+</nav>
+
+<script>
+  function openLink(link) {
+    window.open(link, '_blank');
+  }
+</script>
+
+  <form id="pizzaSurveyForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <p>Choose your favorite pizza toppings:</p>
+
+    <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+    <label for="pepperoni">Pepperoni</label>
+    <br>
+    <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+    <label for="mushrooms">Mushrooms</label>
+    <br>
+    <input type="checkbox" id="onions" name="toppings" value="Onions">
+    <label for="onions">Onions</label>
+    <br>
+    <input type="checkbox" id="sausage" name="toppings" value="Sausage">
+    <label for="sausage">Sausage</label>
+    <br>
+    <input type="checkbox" id="bellPeppers" name="toppings" value="Bell Peppers">
+    <label for="bellPeppers">Bell Peppers</label>
+    <br>
+    <input type="checkbox" id="olives" name="toppings" value="Olives">
+    <label for="olives">Olives</label>
+    <br>
+    <input type="checkbox" id="pineapple" name="toppings" value="Pineapple" disabled>
+    <label for="pineapple">Pineapple</label>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById('pizzaSurveyForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the default form submission
+
+      // Retrieve form data
+      var formData = new FormData(event.target);
+      var name = formData.get('name');
+      var selectedToppings = formData.getAll('toppings');
+
+      // Process the data (you can customize this part based on your needs)
+      console.log('Name:', name);
+      console.log('Selected Toppings:', selectedToppings);
+
+      // Here you can send the data to a server or perform any other necessary actions
+
+      // For this example, let's display a confirmation message
+      alert('Survey submitted successfully!');
+    });
+  </script>
+
+</body>
+</html>
